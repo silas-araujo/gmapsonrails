@@ -1,0 +1,68 @@
+<% provide :head_tags do %>
+<meta name='turbolinks-visit-control' content='reload'>
+    <script>
+    document.addEventListener("DOMContentLoaded", function(){
+        initMap(-3.71839, -38.5434)
+    });
+    </script>
+    
+<% end %>
+
+<p id="notice"><%= notice %></p>
+
+<h1>Maps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Matricula</th>
+      <th>Cpf</th>
+      <th>Bairro</th>
+      <th>Ativo</th>
+      <th>Dor garganta</th>
+      <th>Tosse</th>
+      <th>Febre</th>
+      <th>Dif respirar</th>
+      <th>Nenhum sint</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @maps.each do |map| %>
+
+    <script>
+var GID_BANCO= (<%= map.bairro %>);
+console.log(GID_BANCO)
+</script>
+
+      <tr>
+        <td><%= map.nome %></td>
+        <td><%= map.matricula %></td>
+        <td><%= map.cpf %></td>
+        <td><%= map.bairro %></td>
+        <td><%= map.ativo %></td>
+        <td><%= map.dor_garganta %></td>
+        <td><%= map.tosse %></td>
+        <td><%= map.febre %></td>
+        <td><%= map.dif_respirar %></td>
+        <td><%= map.nenhum_sint %></td>
+        <td><%= link_to 'Show', map %></td>
+        <td><%= link_to 'Edit', edit_map_path(map) %></td>
+        <td><%= link_to 'Destroy', map, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      
+
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Map', new_map_path %>
+
+<p>
+    <div id="map"></div>
+</p>
+

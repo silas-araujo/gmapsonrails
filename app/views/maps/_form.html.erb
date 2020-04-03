@@ -1,0 +1,67 @@
+<%= form_with(model: map, local: true) do |form| %>
+  <% if map.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(map.errors.count, "error") %> prohibited this map from being saved:</h2>
+
+      <ul>
+      <% map.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :matricula %>
+    <%= form.number_field :matricula %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpf %>
+    <%= form.number_field :cpf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bairro %>
+    <%= form.number_field :bairro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ativo %>
+    <%= form.check_box :ativo %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dor_garganta %>
+    <%= form.check_box :dor_garganta %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tosse %>
+    <%= form.check_box :tosse %>
+  </div>
+
+  <div class="field">
+    <%= form.label :febre %>
+    <%= form.check_box :febre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dif_respirar %>
+    <%= form.check_box :dif_respirar %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nenhum_sint %>
+    <%= form.check_box :nenhum_sint %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

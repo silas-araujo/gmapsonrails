@@ -1,0 +1,77 @@
+<% provide :head_tags do %>
+<meta name='turbolinks-visit-control' content='reload'>
+    <script>
+    document.addEventListener("DOMContentLoaded", function(){
+        initMap(-3.71839, -38.5434)
+    });
+    </script>
+    
+<% end %>
+
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @map.nome %>
+</p>
+
+<p>
+  <strong>Matricula:</strong>
+  <%= @map.matricula %>
+</p>
+
+<p>
+  <strong>Cpf:</strong>
+  <%= @map.cpf %>
+</p>
+
+<p>
+  <strong>Bairro:</strong>
+  <%= @map.bairro %>
+</p>
+
+<p>
+  <strong>Ativo:</strong>
+  <%= @map.ativo %>
+</p>
+
+<p>
+  <strong>Dor garganta:</strong>
+  <%= @map.dor_garganta %>
+</p>
+
+<p>
+  <strong>Tosse:</strong>
+  <%= @map.tosse %>
+</p>
+
+<p>
+  <strong>Febre:</strong>
+  <%= @map.febre %>
+</p>
+
+<p>
+  <strong>Dif respirar:</strong>
+  <%= @map.dif_respirar %>
+</p>
+
+<p>
+  <strong>Nenhum sint:</strong>
+  <%= @map.nenhum_sint %>
+</p>
+
+<p>
+    <div id="map"></div>
+</p>
+
+<%= link_to 'Edit', edit_map_path(@map) %> |
+<%= link_to 'Back', maps_path %>
+
+
+<script>
+
+var GID_BANCO = (<%= @map.bairro %>);
+    
+
+</script>

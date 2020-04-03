@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  matricula: 1
+  cpf: 1
+  bairro: 1
+  ativo: false
+  dor_garganta: false
+  tosse: false
+  febre: false
+  dif_respirar: false
+  nenhum_sint: false
+
+two:
+  nome: MyString
+  matricula: 1
+  cpf: 1
+  bairro: 1
+  ativo: false
+  dor_garganta: false
+  tosse: false
+  febre: false
+  dif_respirar: false
+  nenhum_sint: false
